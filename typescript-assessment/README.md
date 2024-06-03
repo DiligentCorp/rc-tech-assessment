@@ -1,0 +1,1 @@
+# general typescript assessment
