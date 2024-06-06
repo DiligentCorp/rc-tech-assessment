@@ -7,9 +7,8 @@
 ## Principles and rules
 
 - You can change code in the `src/implementations` folder.
-- **Please do not modify anything in the `src/sealed` folder.**
+- **Do not modify anything in the `src/sealed` folder.**
 - You will find tests in the `test` folder. You can write new tests, and you can **refactor** existing tests but please do not remove any tests or change the logic of the existing tests.
-- You can use any tools, including AI tools, but please be prepared to explain your solution.
 - Write each task in a separate commit, and do not amend commits, you will likely want to refactor your code as you go, but we want to see your progress.
 
 ## Tasks
