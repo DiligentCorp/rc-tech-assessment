@@ -1,17 +1,16 @@
 import {Book} from "./book";
 
 export class Library {
-    books: Book[];
 
-    constructor(books: Book[]) {
+    constructor(books) {
         this.books = books;
     }
 
-    addBook(book: Book) {
+    addBook(book) {
         this.books.push(book);
     }
 
-    removeBook(book: Book) {
+    removeBook(book) {
         this.books = this.books.filter(b => b !== book);
     }
 

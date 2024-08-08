@@ -1,7 +1,7 @@
 import {test, describe, expect} from "@jest/globals";
 import {Book} from "../src/sealed/book";
 import {Library} from "../src/sealed/library";
-import {UserImplementation} from "../src/implementations/user.implementation";
+import {User} from "../src/implementations/user";
 
 
 
@@ -11,7 +11,7 @@ describe('User', () => {
             //Given
             const book = new Book("book1");
             const library = new Library([book]);
-            const user = new UserImplementation();
+            const user = new User();
 
             //When
             const result = user.borrow(book, library);
@@ -25,7 +25,7 @@ describe('User', () => {
             //Given
             const book = new Book("book1");
             const library = new Library([book]);
-            const user = new UserImplementation();
+            const user = new User();
             user.borrow(book, library);
 
             //When
@@ -42,8 +42,8 @@ describe('User', () => {
             //Given
             const book = new Book("book1");
             const library = new Library([book]);
-            const user1 = new UserImplementation();
-            const user2 = new UserImplementation();
+            const user1 = new User();
+            const user2 = new User();
 
             //When
             user1.borrow(book, library);
