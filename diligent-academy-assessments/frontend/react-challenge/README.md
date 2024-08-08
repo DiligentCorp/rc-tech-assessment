@@ -15,13 +15,16 @@ Create a React component for listing heroes.
 2. Create a separate component for hero list items.
 
 
-3. Show a "Loading" message while we are fetching the heroes. If the fetch fails, show an error message like "Failed to fetch heroes.
+3. When clicking on a hero, switch it from available to unavailable and vice versa. The change should be reflected in the UI.
 
 
-4. Style the components to look similar to this image:
+4. Show a "Loading" message while we are fetching the heroes. If the fetch fails, show an error message like "Failed to fetch heroes.
+
+
+5. Style the components to look similar to this image:
    ![img.png](img.png)
    **The exact colors, paddings, margins, etc. are not important, but the general layout should be similar.**
 
 
-5. Create a custom hook for wrapping the fetch functionality.
+6. Create a custom hook for wrapping the fetch functionality.
 
