@@ -12,18 +12,21 @@
 
 ## Tasks
 
-Implement the methods in the `user.implementation.ts` file.
+Implement the methods in the `user.js` file.
 
 The `User` class has the following methods:
 
-- `borrow(book: Book, library:Library): void` - This method should add the book to the user's borrowed books list, and
+- `borrow(book, library)` - This method should add the book to the user's borrowed books list, and
   remove the book from the library's available books list.
 
 
-- `return(book: Book, library:Library): void` - This method should remove the book from the user's borrowed books list,
+- `hasBook(book)` - This method should return a boolean if the user has the book borrowed.
+
+
+- `return(book library)` - This method should remove the book from the user's borrowed books list,
   and
-  add the book to the library's available books list.
+  add the book to the library's available books list. It should return a boolean if it could return the book
+  because the user had it borrowed.
 
 
-- `getBooks(): Book[]` - This method should return the list of books the user has borrowed.
-
+- `getBookNames()` - This method should return the list of names of the books the user has borrowed.

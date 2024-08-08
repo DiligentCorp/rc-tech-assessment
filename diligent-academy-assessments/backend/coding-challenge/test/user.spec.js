@@ -4,7 +4,6 @@ import {Library} from "../src/sealed/library";
 import {User} from "../src/implementations/user";
 
 
-
 describe('User', () => {
     describe('can', () => {
         test("borrow a book", async () => {
@@ -14,11 +13,25 @@ describe('User', () => {
             const user = new User();
 
             //When
-            const result = user.borrow(book, library);
+            user.borrow(book, library);
+
+            //Then
+            expect(library.getBooks()).toEqual([]);
+            expect(user.books).toEqual([book]);
+        })
+
+        test('check if they have a book', () => {
+            //Given
+            const book = new Book("book1");
+            const library = new Library([book]);
+            const user = new User();
+            user.borrow(book, library);
+
+            //When
+            const result = user.hasBook(book);
 
             //Then
             expect(result).toBe(true);
-            expect(library.getBooks()).toEqual([]);
         })
 
         test("return a book", async () => {
@@ -33,27 +46,40 @@ describe('User', () => {
 
             //Then
             expect(library.getBooks()).toEqual([book]);
-            expect(user.getBooks()).toEqual([]);
+            expect(user.books).toEqual([]);
+        })
+
+        test('return the name of every book they have borrowed', () => {
+            //Given
+            const book1 = new Book("book1");
+            const book2 = new Book("book2");
+            const library = new Library([book1, book2]);
+            const user = new User();
+            user.borrow(book1, library);
+            user.borrow(book2, library);
+
+            //When
+            const bookNames = user.getBookNames();
+
+            //Then
+            expect(bookNames).toEqual(["book1", "book2"]);
         })
     })
 
     describe('cannot', () => {
-        test("borrow a book that is already borrowed", async () => {
+        test("return a book that they already returned", async () => {
             //Given
             const book = new Book("book1");
             const library = new Library([book]);
-            const user1 = new User();
-            const user2 = new User();
+            const user = new User();
 
             //When
-            user1.borrow(book, library);
-            const result = user2.borrow(book, library);
+            user.borrow(book, library);
+            user.return(book, library);
+            const result = user.return(book, library);
 
             //Then
             expect(result).toBe(false);
-            expect(user1.getBooks()).toEqual([book]);
-            expect(library.getBooks()).toEqual([]);
-            expect(user2.getBooks()).toEqual([]);
         });
     })
 })

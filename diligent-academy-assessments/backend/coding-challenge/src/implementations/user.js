@@ -1,13 +1,22 @@
 export class User {
+
+    constructor() {
+        this.books = [];
+    }
+
     borrow(book, library) {
-        throw new Error("Method not implemented.");
+        throw new Error('Not implemented');
+    }
+
+    hasBook(book) {
+        throw new Error('Not implemented');
     }
 
     return(book, library) {
-        throw new Error("Method not implemented.");
+        throw new Error('Not implemented');
     }
 
-    getBooks() {
-        throw new Error("Method not implemented.");
+    getBookNames() {
+        throw new Error('Not implemented');
     }
 }
