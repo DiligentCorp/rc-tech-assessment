@@ -1,9 +1,9 @@
 import {describe, expect, test} from "@jest/globals";
-import {InfrastructureBuilder} from "sealed/infrastructure-builder";
-import {createNMovies} from "implementations/utils/create-movie";
-import {MovieRow, MovieTable} from "implementations/tables/movie-table";
-import {GetMoviesRoute} from "implementations/routes/get-movies-route";
-import {MyClient} from "implementations/my-client";
+import {MovieRow, MovieTable} from "../src/implementations/tables/movie-table";
+import {createNMovies} from "../src/implementations/utils/create-movie";
+import {InfrastructureBuilder} from "../src/sealed/infrastructure-builder";
+import {GetMoviesRoute} from "../src/implementations/routes/get-movies-route";
+import {MyClient} from "../src/implementations/my-client";
 
 describe("The client can list every movie in the database", () => {
     const testNumberOfMovies = [0, 1, 2, 10, 20, 25, 50, 100, 161, 300];
