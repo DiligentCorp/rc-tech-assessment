@@ -2,8 +2,7 @@
 
 ## How to use
 
-- You can run the tests using the command `npm test` to check your work, they are running in watch mode, meaning you do
-  not need to rerun them when you change your code.
+- Use `npm test` to check your work. This command runs the tests in watch mode, so you do  not need to rerun it when you change your code.
 
 ## Principles and rules
 
@@ -23,10 +22,9 @@ The `User` class has the following methods:
 - `hasBook(book)` - This method should return a boolean if the user has the book borrowed.
 
 
-- `return(book library)` - This method should remove the book from the user's borrowed books list,
+- `return(book, library)` - This method should remove the book from the user's borrowed books list,
   and
-  add the book to the library's available books list. It should return a boolean if it could return the book
-  because the user had it borrowed.
+  add the book to the library's available books list. It should return true if the book was successfully returned, and false if the user does not have the book borrowed.
 
 
 - `getBookNames()` - This method should return the list of names of the books the user has borrowed.
