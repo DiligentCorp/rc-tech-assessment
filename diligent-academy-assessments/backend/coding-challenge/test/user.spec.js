@@ -3,7 +3,6 @@ import {Book} from "../src/sealed/book";
 import {Library} from "../src/sealed/library";
 import {User} from "../src/implementations/user";
 
-
 describe('User', () => {
     describe('can', () => {
         test("borrow a book", async () => {
@@ -83,7 +82,3 @@ describe('User', () => {
         });
     })
 })
-
-
-
-

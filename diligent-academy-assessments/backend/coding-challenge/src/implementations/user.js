@@ -1,5 +1,4 @@
 export class User {
-
     constructor() {
         this.books = [];
     }

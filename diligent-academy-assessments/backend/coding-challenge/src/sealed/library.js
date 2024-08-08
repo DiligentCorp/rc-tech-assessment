@@ -1,7 +1,4 @@
-import {Book} from "./book";
-
 export class Library {
-
     constructor(books) {
         this.books = books;
     }
