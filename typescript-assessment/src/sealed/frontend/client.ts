@@ -1,4 +1,4 @@
-import { Row } from "sealed/storage/row";
+import { Row } from "../storage/row";
 
 export interface Client {
   getAllMovies<T extends Row<any, any>>(): Promise<T[]>;

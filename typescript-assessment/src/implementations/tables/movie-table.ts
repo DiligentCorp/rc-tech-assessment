@@ -1,5 +1,5 @@
-import { Table } from "sealed/storage/table";
-import { Row } from "sealed/storage/row";
+import { Table } from "../../sealed/storage/table";
+import { Row } from "../../sealed/storage/row";
 
 export type MovieValues = {
   title: string;

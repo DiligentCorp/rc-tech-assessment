@@ -1,7 +1,10 @@
 import { expect, test } from "@jest/globals";
-import { MovieRow, MovieTable } from "implementations/tables/movie-table";
-import { InfrastructureBuilder } from "sealed/infrastructure-builder";
-import { MyClient } from "implementations/my-client";
+import {
+  MovieRow,
+  MovieTable,
+} from "../src/implementations/tables/movie-table";
+import { InfrastructureBuilder } from "../src/sealed/infrastructure-builder";
+import { MyClient } from "../src/implementations/my-client";
 
 test("The client can delete movies by id", async () => {
   //Given

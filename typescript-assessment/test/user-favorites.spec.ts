@@ -1,8 +1,11 @@
 import { expect, test } from "@jest/globals";
-import { MovieRow, MovieTable } from "implementations/tables/movie-table";
-import { InfrastructureBuilder } from "sealed/infrastructure-builder";
-import { MyClient } from "implementations/my-client";
 import { fail } from "./utils/fail";
+import {
+  MovieRow,
+  MovieTable,
+} from "../src/implementations/tables/movie-table";
+import { InfrastructureBuilder } from "../src/sealed/infrastructure-builder";
+import { MyClient } from "../src/implementations/my-client";
 
 test("Users can favorite movies", async () => {
   //Given

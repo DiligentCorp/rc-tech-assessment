@@ -110,14 +110,7 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true,
-    "baseUrl": "./",
-    "paths": {
-      "*": ["src/types/*"],
-      // This assumes that you have a 'types' directory under 'src' where you keep your type declarations.
-      "sealed/*": ["src/sealed/*"],
-      "implementations/*": ["src/implementations/*"],
-      "utils/*": ["src/utils/*"]
-    }
+    "baseUrl": "./"
     /* Skip type checking all .d.ts files. */
   }
 }

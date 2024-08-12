@@ -1,7 +1,7 @@
-import { Client } from "sealed/frontend/client";
-import { Pagination } from "sealed/storage/pagination";
-import { Api } from "sealed/backend/api";
 import { GetMoviesRoute } from "./routes/get-movies-route";
+import { Client } from "../sealed/frontend/client";
+import { Api } from "../sealed/backend/api";
+import { Pagination } from "../sealed/storage/pagination";
 
 export class MyClient implements Client {
   constructor(private readonly api: Api) {}
