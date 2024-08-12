@@ -1,17 +1,17 @@
 export class Library {
-    constructor(books) {
-        this.books = books;
-    }
+  constructor(books) {
+    this.books = books;
+  }
 
-    addBook(book) {
-        this.books.push(book);
-    }
+  addBook(book) {
+    this.books.push(book);
+  }
 
-    removeBook(book) {
-        this.books = this.books.filter(b => b !== book);
-    }
+  removeBook(book) {
+    this.books = this.books.filter((b) => b !== book);
+  }
 
-    getBooks() {
-        return this.books;
-    }
+  getBooks() {
+    return this.books;
+  }
 }

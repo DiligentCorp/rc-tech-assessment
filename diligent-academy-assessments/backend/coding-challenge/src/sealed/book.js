@@ -1,5 +1,5 @@
 export class Book {
-    constructor(name) {
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name;
+  }
 }
