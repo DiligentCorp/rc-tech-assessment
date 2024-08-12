@@ -7,7 +7,7 @@
 ## Tasks
 
 1. Create the student table with the following fields: `name` and `email`. What columns would you create to represent
-   them? Which types and constraints would make sense for a user table?
+   them? Which types and constraints would make sense for this table?
 
 
 2. Create the class table, each class has a `name`.
