@@ -1,0 +1,74 @@
+{
+  "stories": [],
+  "rooms": [
+    {
+      "id": "ba3ba7d0-aac3-4320-ba0d-5c034b440691",
+      "name": "Refine Sprint 001",
+      "createdAt": "2024-11-01",
+      "userId": "7a19c312-644c-425f-996c-c58c61b3afa7"
+    },
+    {
+      "id": "7d5eb71f-ca22-4d73-b4d4-4450f224c36e",
+      "name": "Refine Sprint 002",
+      "createdAt": "2024-11-12",
+      "userId": "74ae71e2-55d4-4fac-9402-981959e1fcd5"
+    },
+    {
+      "id": "14a0c47e-59b4-4471-834d-6dbe24824ac6",
+      "name": "Refine Sprint 003",
+      "createdAt": "2024-11-08",
+      "userId": "74ae71e2-55d4-4fac-9402-981959e1fcd5"
+    },
+    {
+      "id": "88f84f97-8eb1-49e5-a89f-3ed75588ceee",
+      "name": "Refine Sprint 004",
+      "createdAt": "2024-10-31",
+      "userId": "7a19c312-644c-425f-996c-c58c61b3afa7"
+    },
+    {
+      "id": "2584bb9a-e275-4079-8cc9-8bbd38981b89",
+      "name": "Refine Sprint 005",
+      "createdAt": "2024-11-04",
+      "userId": "74ae71e2-55d4-4fac-9402-981959e1fcd5"
+    },
+    {
+      "id": "b0605a8f-f2ce-4496-895e-9c0b73b1353d",
+      "name": "Refine Sprint 006",
+      "createdAt": "2024-11-08",
+      "userId": "58addfdb-3e44-45b9-90b5-7da3b216917d"
+    }
+  ],
+  "votes": [],
+  "users": [
+    {
+      "id": "caad8e4d-b587-4a0a-b79c-4bf57fd71793",
+      "first_name": "Johnette",
+      "last_name": "Sanford",
+      "email": "kerry@tremblay-von.test"
+    },
+    {
+      "id": "58addfdb-3e44-45b9-90b5-7da3b216917d",
+      "first_name": "Judson",
+      "last_name": "Morissette",
+      "email": "kathy@schmidt.test"
+    },
+    {
+      "id": "74ae71e2-55d4-4fac-9402-981959e1fcd5",
+      "first_name": "Neville",
+      "last_name": "Boyle",
+      "email": "tracy.west@ritchie.example"
+    },
+    {
+      "id": "7a44f1dd-bd1f-4af1-9633-5c9058df99d1",
+      "first_name": "Freddie",
+      "last_name": "Nader",
+      "email": "francesco@herman.test"
+    },
+    {
+      "id": "7a19c312-644c-425f-996c-c58c61b3afa7",
+      "first_name": "Susie",
+      "last_name": "Hills I",
+      "email": "kelly.schneider@kunze.example"
+    }
+  ]
+}
