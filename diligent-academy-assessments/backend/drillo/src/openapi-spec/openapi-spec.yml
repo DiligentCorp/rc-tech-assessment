@@ -1,0 +1,133 @@
+# To generate types from this file, run:
+# npx openapi-typescript src/openapi-spec/openapi-spec.yml --output src/openapi-spec/types.ts
+
+openapi: 3.0.0
+info:
+  title: Drillo
+  version: 1.0.0
+paths:
+  /boards:
+    get:
+      summary: Get all boards
+      operationId: getBoards
+      responses:
+        "200":
+          description: A list of boards
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Board"
+        "500":
+          description: Internal server error
+    post:
+      summary: Create a new board
+      operationId: createBoard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BoardInput"
+      responses:
+        "201":
+          description: The created board
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Board"
+        "400":
+          description: Bad request
+        "500":
+          description: Internal server error
+  /boards/{id}:
+    get:
+      summary: Get a board by ID
+      operationId: getBoardById
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: The requested board
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Board"
+        "400":
+          description: Bad request
+        "404":
+          description: Board not found
+        "500":
+          description: Internal server error
+    patch:
+      summary: Update a board by ID
+      operationId: updateBoard
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BoardInput"
+      responses:
+        "200":
+          description: The updated board
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Board"
+        "400":
+          description: Bad request
+        "404":
+          description: Board not found
+        "500":
+          description: Internal server error
+  /boards/{id}/delete:
+    delete:
+      summary: Soft delete a board by ID
+      operationId: deleteBoard
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Board soft deleted
+        "400":
+          description: Bad request
+        "404":
+          description: Board not found
+        "500":
+          description: Internal server error
+components:
+  schemas:
+    Board:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+    BoardInput:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+      required:
+        - name
