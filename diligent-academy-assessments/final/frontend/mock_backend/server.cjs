@@ -11,7 +11,14 @@ server.get('/votes', async (req, res) => {
   const { storyId } = req.query;
   await router.db.read();
   const users = router.db.get('users').value();
-  const story = router.db.get('stories').find({ id: storyId }).value();
+  
+  const stories = router.db.get('stories').value();
+  const story = stories.find((story) => story.id == storyId)
+  
+  if (!story) {
+    res.status(404).jsonp({ data: [] });
+    return;
+  }
 
   res.jsonp({
     data: users.map(user => {
@@ -33,14 +40,14 @@ server.delete('/stories/:id', async (req, res) => {
   res.jsonp({ success: true })
 })
 
-router.render = (req, res) => {
+router.render = async (req, res) => {
   const params = qs.parse(req.originalUrl.split('?')[1], { ignoreQueryPrefix: true })
   const page = params._page || 1;
   const limit = params._limit || 5;
 
   res.jsonp({
     data: res.locals.data,
-    total: res.locals.data.length,
+    total: res.getHeader('X-Total-Count')?.value(),
     page_size: +limit, 
     page_number: +page
   })
